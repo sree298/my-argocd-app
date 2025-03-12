@@ -38,12 +38,6 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 ```
-
-  "scripts": {
-    "start": "node app.js"
-  }
-}
-```
 4.Install the dependencies:
 ```bash
 npm install
