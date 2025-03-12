@@ -146,7 +146,7 @@ spec:
   - Open the ArgoCD UI (you can access it via Minikube):
     ```bash
     minikube service argocd-server -n argocd
-```
+    ```
   - Log in using the default credentials (admin / get the password using kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | 
     base64 -d).
 - Create a new Application in ArgoCD pointing to your GitHub repository:
