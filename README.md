@@ -140,6 +140,7 @@ spec:
   - Open the ArgoCD UI (you can access it via Minikube):
     ```bash
     minikube service argocd-server -n argocd
+    
     ```
   - Log in using the default credentials (admin / get the password using kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | 
     base64 -d).
@@ -155,6 +156,8 @@ spec:
  1. In Minikube, expose the app externally:
 ```bash
 kubectl expose deployment my-argocd-app --type=LoadBalancer --name=my-argocd-app-service
+kubectl expose deployment my-argocd-app --type=LoadBalancer --name=my-argocd-app-service -n app
+minikube service my-argocd-app-service -n app --url
 ```
 2. Get the URL to access the app:
 3. Open the URL in your browser, and you should see the message "Hello from ArgoCD app!"
