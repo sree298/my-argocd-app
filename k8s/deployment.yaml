@@ -17,9 +17,3 @@ spec:
         image: srinu298/my-argocd-app:v1
         ports:
         - containerPort: 8080
-        readinessProbe:
-          httpGet:
-            path: /healthz  # Add a health endpoint if you have one
-            port: 8080
-          initialDelaySeconds: 5
-          periodSeconds: 10
